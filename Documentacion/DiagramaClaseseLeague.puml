@@ -1,0 +1,49 @@
+@startuml
+
+class Equipo <<entity>>{
+    - nombre : string
+    - fechaFund : date
+}
+
+Equipo o-- Jugador : "cuenta con >"
+Equipo *-- PerfilEstad : "posee >"
+
+
+class PerfilEstad <<entity>>{
+    - partidasGana : int
+    - partidasPerd : int
+}
+
+class Jugador <<entity>>{
+    - nombre : string
+    - alias : string
+    - nivel : int
+}
+
+Jugador <|-- Profesional
+Jugador <|-- Amateur
+
+class Profesional <<entity>>{
+    - sueldo : double
+    - patrocinador : string
+}
+
+class Amateur <<entity>>{
+    - centroEstudio : string
+}
+
+interface IEntrevistable <<entity>>{
+    + RealizarDeclaraciones() : void
+}
+
+IEntrevistable <|.. Profesional
+
+class GestorFichajes <<control>>{}
+
+GestorFichajes ..> Equipo : "gestiona >"
+
+class PantallaRegistro <<boundary>>{}
+
+PantallaRegistro ..> GestorFichajes : "usa >"
+
+@enduml
