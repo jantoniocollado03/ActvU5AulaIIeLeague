@@ -2,9 +2,9 @@
 
 public class Jugador
 {
-    private string Nombre { get; }
-    private string Alias { get; }
-    private int Nivel { get; }
+    public string Nombre { get; }
+    public string Alias { get; }
+    public int Nivel { get; }
 
     public Jugador(string nombre, string alias, int nivel)
     {

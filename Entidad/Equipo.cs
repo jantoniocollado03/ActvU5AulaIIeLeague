@@ -2,8 +2,8 @@
 
 public class Equipo
 {
-    private string Nombre { get; set; }
-    private DateTime FechaFund { get; set; }
+    public string Nombre { get; set; }
+    public DateTime FechaFund { get; set; }
     public List<Jugador> Jugadores { get; private set; }
     public PerfilEstad Estadisticas { get; private set; }
 

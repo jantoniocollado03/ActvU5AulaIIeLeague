@@ -2,8 +2,8 @@
 
 public class PerfilEstad
 {
-    private int PartidasGana { get; set; }
-    private int PartidasPerd { get; set; }
+    public int PartidasGana { get; set; }
+    public int PartidasPerd { get; set; }
 
     public PerfilEstad()
     {

@@ -1,8 +1,8 @@
 @startuml
 
 class Equipo <<entity>>{
-    - nombre : string
-    - fechaFund : date
+    + nombre : string
+    + fechaFund : date
 }
 
 Equipo o-- Jugador : "cuenta con >"
@@ -10,26 +10,26 @@ Equipo *-- PerfilEstad : "posee >"
 
 
 class PerfilEstad <<entity>>{
-    - partidasGana : int
-    - partidasPerd : int
+    + partidasGana : int
+    + partidasPerd : int
 }
 
 class Jugador <<entity>>{
-    - nombre : string
-    - alias : string
-    - nivel : int
+    + nombre : string
+    + alias : string
+    + nivel : int
 }
 
 Jugador <|-- Profesional
 Jugador <|-- Amateur
 
 class Profesional <<entity>>{
-    - sueldo : double
-    - patrocinador : string
+    + sueldo : double
+    + patrocinador : string
 }
 
 class Amateur <<entity>>{
-    - centroEstudio : string
+    + centroEstudio : string
 }
 
 interface IEntrevistable <<entity>>{
